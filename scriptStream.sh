@@ -8,6 +8,13 @@
 # specifcy the path to the sparseimage archive
 /usr/sbin/slapconfig -restoredb /Volumes/Backup/odbackup.sparseimage
 
+# Start/Stop LDAP Server
+/usr/sbin/slapconfig -stopldapserver
+/usr/sbin/slapconfig -startldapserver
+
+# Start/Stop Password Service
+/usr/sbin/slapconfig -startpasswordserver
+/usr/sbin/slapconfig -stoppasswordserver
 # Preflight for OD Master
 /usr/sbin/slapconfig -preflightmaster --certAuthName "Acme, Inc. Open Directory Certification Authority" --certAdminEmail "support@example.com" acmediradmin 1000
 
