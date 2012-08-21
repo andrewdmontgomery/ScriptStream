@@ -1,5 +1,4 @@
 ## Managing Open Directory
-
 # Backup ODM
 # creates a sparseimage with the name 'odbackup' in /var/backups
 /usr/sbin/slapconfig -backupdb /var/backups/odbackup
@@ -31,3 +30,8 @@
 # Create OD Replica
 # Note: the order of the directory admin and the master's hostname is reversed from the 'preflight' command
 /usr/sbin/slapconfig -createreplica --certAdminEmail "support@example.com" odr.example.com acmediradmin
+
+
+
+# Curious commands, find out more:
+# /usr/sbin/slapconfig -enableproxyusers
