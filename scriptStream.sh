@@ -2,11 +2,11 @@
 
 # Backup ODM
 # creates a sparseimage with the name 'odbackup' in /var/backups
-slapconfig -backupdb /var/backups/odbackup
+/usr/sbin/slapconfig -backupdb /var/backups/odbackup
 
 # Restore ODM
 # specifcy the path to the sparseimage archive
-slapconfig -restoredb /Volumes/Backup/odbackup.sparseimage
+/usr/sbin/slapconfig -restoredb /Volumes/Backup/odbackup.sparseimage
 
 # Preflight for OD Master
 /usr/sbin/slapconfig -preflightmaster --certAuthName "Acme, Inc. Open Directory Certification Authority" --certAdminEmail "support@example.com" acmediradmin 1000
